@@ -24,20 +24,20 @@ class ConfigManager:
 
     public_keys = {
         # activity
-        "twitch_url": "https://www.twitch.tv/discordmodmail/",
+        "twitch_url": "https://www.twitch.tv/gameparadiselive/",
         # bot settings
         "main_category_id": None,
         "fallback_category_id": None,
         "prefix": "?",
-        "mention": "@here",
+        "mention": "<@&1099731910160298004> <@&1099473545786032188>",
         "main_color": str(discord.Color.blurple()),
         "error_color": str(discord.Color.red()),
-        "user_typing": False,
-        "mod_typing": False,
+        "user_typing": True,
+        "mod_typing": True,
         "account_age": isodate.Duration(),
         "guild_age": isodate.Duration(),
         "thread_cooldown": isodate.Duration(),
-        "reply_without_command": False,
+        "reply_without_command": True,
         "anon_reply_without_command": False,
         "plain_reply_without_command": False,
         # logging
@@ -47,49 +47,49 @@ class ConfigManager:
         # updates
         "update_notifications": True,
         # threads
-        "sent_emoji": "\N{WHITE HEAVY CHECK MARK}",
-        "blocked_emoji": "\N{NO ENTRY SIGN}",
+        "sent_emoji": "<:yes:1101562256392724570>",
+        "blocked_emoji": "`<:no:1101562252798202006>",
         "close_emoji": "\N{LOCK}",
         "use_user_id_channel_name": False,
         "use_timestamp_channel_name": False,
         "use_nickname_channel_name": False,
         "use_random_channel_name": False,
         "recipient_thread_close": False,
-        "thread_show_roles": True,
+        "thread_show_roles": False,
         "thread_show_account_age": True,
         "thread_show_join_age": True,
-        "thread_cancelled": "Cancelled",
+        "thread_cancelled": "Die Aktion wurde durch dass System oder durch dich abgebrochen",
         "thread_auto_close_silently": False,
         "thread_auto_close": isodate.Duration(),
-        "thread_auto_close_response": "This thread has been closed automatically due to inactivity after {timeout}.",
-        "thread_creation_response": "The staff team will get back to you as soon as possible.",
-        "thread_creation_footer": "Your message has been sent",
+        "thread_auto_close_response": "⏰ Dieses Ticket wurde aufgrund von Inaktivität automatisch geschlossen. Es ist seit {timeout} unverändert geblieben. 😕 Bitte eröffne bei Bedarf ein neues Ticket, oder antworte einfach auf diese Nachricht, um das vorherige Ticket wieder zu öffnen. Wir sind jederzeit gerne für dich da! 🤗",
+        "thread_creation_response": "Hallo, vielen Dank, dass du dich an den Support von den Game Paradise gewendet hast. Bitte beachte, dass alle [Regeln](https://game-paradise.de/index.php?regeln/) im Support ebenfalls gelten.\n\nUnser Mitarbeiterteam wird sich so schnell wie möglich bei ihnen melden.\n\n__Bitte beachte , dass wenn sie nicht mit Sie sondern mit du angesprochen werden möchten, dann sagen dies bitte direkt!__",
+        "thread_creation_footer": "Deine Nachricht wurde gesendet",
         "thread_contact_silently": False,
-        "thread_self_closable_creation_footer": "Click the lock to close the thread",
-        "thread_creation_contact_title": "New Thread",
-        "thread_creation_self_contact_response": "You have opened a Modmail thread.",
-        "thread_creation_contact_response": "{creator.name} has opened a Modmail thread.",
-        "thread_creation_title": "Thread Created",
-        "thread_close_footer": "Replying will create a new thread",
-        "thread_close_title": "Thread Closed",
-        "thread_close_response": "{closer.mention} has closed this Modmail thread.",
-        "thread_self_close_response": "You have closed this Modmail thread.",
-        "thread_move_title": "Thread Moved",
+        "thread_self_closable_creation_footer": "Klicke auf das Schloss, um den Ticket zu schließen",
+        "thread_creation_contact_title": "Neues Ticket wurde erstellt",
+        "thread_creation_self_contact_response": "Du hast ein Modmail-Ticket eröffnet.",
+        "thread_creation_contact_response": "📢 Hey! 🙋‍♀️ \n\nEin Mitglied unseres Teams hat ein Ticket für dich erstellt! 🎟️\n\n🛠️Teamler: {creator.name}",
+        "thread_creation_title": "Ticket erstellt",
+        "thread_close_footer": "Durch Antworten wird ein neues Ticket erstellt",
+        "thread_close_title": "Ticket geschlossen",
+        "thread_close_response": "{closer.mention} hat dieses Modmail-Ticket geschlossen.",
+        "thread_self_close_response": "Der zuständige Supporter oder ein anderes Teammitglied hat dein Ticket geschlossen.",
+        "thread_move_title": "Ticket verschoben",
         "thread_move_notify": False,
-        "thread_move_notify_mods": False,
-        "thread_move_response": "This thread has been moved.",
-        "cooldown_thread_title": "Message not sent!",
-        "cooldown_thread_response": "Your cooldown ends {delta}. Try contacting me then.",
-        "disabled_new_thread_title": "Not Delivered",
-        "disabled_new_thread_response": "We are not accepting new threads.",
-        "disabled_new_thread_footer": "Please try again later...",
-        "disabled_current_thread_title": "Not Delivered",
-        "disabled_current_thread_response": "We are not accepting any messages.",
-        "disabled_current_thread_footer": "Please try again later...",
-        "transfer_reactions": True,
-        "close_on_leave": False,
-        "close_on_leave_reason": "The recipient has left the server.",
-        "alert_on_mention": False,
+        "thread_move_notify_mods": True,
+        "thread_move_response": "Dieses Ticket wurde verschoben.",
+        "cooldown_thread_title": "Nachricht nicht gesendet!",
+        "cooldown_thread_response": "Die Abklingzeit endet am {delta}. Versuche dann, mich zu kontaktieren.",
+        "disabled_new_thread_title": "Ticket nicht erstellt",
+        "disabled_new_thread_response": "👋 Hallo! Wir bedauern, dass unser Support derzeit nicht verfügbar ist. 😔 Bitte versuche es später erneut, oder schreibe uns einer unserer Teamler Privat an, damit wir dir schnellstmöglich helfen können. 📧 Vielen Dank für dein Verständnis! 😊",
+        "disabled_new_thread_footer": "Bitte versuche es später noch einmal...",
+        "disabled_current_thread_title": "Ticket nicht erstellt",
+        "disabled_current_thread_response": "🚫 Leider können wir derzeit keine Nachrichten entgegennehmen. Wir entschuldigen uns für die Unannehmlichkeiten! 😔 Bitte versuche es zu einem späteren Zeitpunkt erneut. Vielen Dank für dein Verständnis. 🙏",
+        "disabled_current_thread_footer": "Bitte versuche es später noch einmal...",
+        "transfer_reactions": False,
+        "close_on_leave": True,
+        "close_on_leave_reason": "Der Empfänger hat den Server verlassen.",
+        "alert_on_mention": True,
         "silent_alert_on_mention": False,
         "show_timestamp": True,
         "anonymous_snippets": False,
@@ -97,18 +97,18 @@ class ConfigManager:
         "require_close_reason": False,
         "show_log_url_button": False,
         # group conversations
-        "private_added_to_group_title": "New Thread (Group)",
-        "private_added_to_group_response": "{moderator.name} has added you to a Modmail thread.",
-        "private_added_to_group_description_anon": "A moderator has added you to a Modmail thread.",
-        "public_added_to_group_title": "New User",
-        "public_added_to_group_response": "{moderator.name} has added {users} to the Modmail thread.",
-        "public_added_to_group_description_anon": "A moderator has added {users} to the Modmail thread.",
-        "private_removed_from_group_title": "Removed From Thread (Group)",
-        "private_removed_from_group_response": "{moderator.name} has removed you from the Modmail thread.",
-        "private_removed_from_group_description_anon": "A moderator has removed you from the Modmail thread.",
-        "public_removed_from_group_title": "User Removed",
-        "public_removed_from_group_response": "{moderator.name} has removed {users} from the Modmail thread.",
-        "public_removed_from_group_description_anon": "A moderator has removed {users} from the Modmail thread.",
+        "private_added_to_group_title": "Neues Ticket (Gruppe)",
+        "private_added_to_group_response": "{moderator.name} hat dich zu einem Modmail-Ticket hinzugefügt.",
+        "private_added_to_group_description_anon": "Ein Mitarbeiter hat dich zu einem Modmail-Ticket hinzugefügt.",
+        "public_added_to_group_title": "Neuer Benutzer",
+        "public_added_to_group_response": "{moderator.name} hat {users} zum Modmail-Ticket hinzugefügt.",
+        "public_added_to_group_description_anon": "Ein Mitarbeiter hat {users} zum Modmail-Ticket hinzugefügt.",
+        "private_removed_from_group_title": "Aus Ticket entfernt (Gruppe)",
+        "private_removed_from_group_response": "{moderator.name} hat dich aus dem Modmail-Ticket entfernt.",
+        "private_removed_from_group_description_anon": "Ein Mitarbeiter hat dich aus dem Modmail-Ticket entfernt.",
+        "public_removed_from_group_title": "Benutzer entfernt",
+        "public_removed_from_group_response": "{moderator.name} hat {users} aus dem Modmail-Ticket entfernt.",
+        "public_removed_from_group_description_anon": "Ein Mitarbeiter hat {users} aus dem Modmail-Ticket entfernt.",
         # moderation
         "recipient_color": str(discord.Color.gold()),
         "mod_color": str(discord.Color.green()),
@@ -116,19 +116,19 @@ class ConfigManager:
         # anonymous message
         "anon_username": None,
         "anon_avatar_url": None,
-        "anon_tag": "Response",
+        "anon_tag": "Antwort",
         # react to contact
         "react_to_contact_message": None,
-        "react_to_contact_emoji": "\N{WHITE HEAVY CHECK MARK}",
+        "react_to_contact_emoji": "<:yes:1101562256392724570>",
         # confirm thread creation
-        "confirm_thread_creation": False,
-        "confirm_thread_creation_title": "Confirm thread creation",
-        "confirm_thread_response": "React to confirm thread creation which will directly contact the moderators",
-        "confirm_thread_creation_accept": "\N{WHITE HEAVY CHECK MARK}",
-        "confirm_thread_creation_deny": "\N{NO ENTRY SIGN}",
+        "confirm_thread_creation": True,
+        "confirm_thread_creation_title": "Möchtest du den Offiziellen Support Kontaktieren?",
+        "confirm_thread_response": "Du bist dabei ein Ticket zu erstellen.\n\nFolgendes Solltest du beachten.\n\n> 1. Dies ist der einzige Offizielle Support von [Game Paradise](https://game-paradise.de)\n\n> 2. Dein Ticket wird nach 48 Stunden Inaktivität vom System geschlossen.\n\n> 3. Unsere Mitarbeiter sind nicht verpflichtet dein Ticket vorzuziehen oder es direkt zu bearbeiten.\n\n**Folgende Gründe einer Erstellung stehen dir zur Verfügung**\n\n> Support\n> Bewerben Team\n> Bewerben Partner\n> Allgemeine Frage\n> Gewinn abholung\n> User Melden\n\n**Ticket erstellen**\n\n<:yes:1101562256392724570>: Erstellen\n<:no:1101562252798202006>: Keins erstellen",
+        "confirm_thread_creation_accept": "<:yes:1101562256392724570>",
+        "confirm_thread_creation_deny": "<:no:1101562252798202006>",
         # regex
         "use_regex_autotrigger": False,
-        "use_hoisted_top_role": True,
+        "use_hoisted_top_role": False,
     }
 
     private_keys = {
@@ -166,8 +166,6 @@ class ConfigManager:
         "database_type": "mongodb",
         "connection_uri": None,  # replace mongo uri in the future
         "owners": None,
-        "enable_presence_intent": False,
-        "registry_plugins_only": False,
         # bot
         "token": None,
         "enable_plugins": True,
@@ -223,8 +221,6 @@ class ConfigManager:
         "thread_show_account_age",
         "thread_show_join_age",
         "use_hoisted_top_role",
-        "enable_presence_intent",
-        "registry_plugins_only",
     }
 
     enums = {
@@ -254,13 +250,13 @@ class ConfigManager:
         data.update({k.lower(): v for k, v in os.environ.items() if k.lower() in self.all_keys})
         config_json = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config.json")
         if os.path.exists(config_json):
-            logger.debug("Loading envs from config.json.")
+            logger.debug("Laden von envs aus config.json.")
             with open(config_json, "r", encoding="utf-8") as f:
                 # Config json should override env vars
                 try:
                     data.update({k.lower(): v for k, v in json.load(f).items() if k.lower() in self.all_keys})
                 except json.JSONDecodeError:
-                    logger.critical("Failed to load config.json env values.", exc_info=True)
+                    logger.critical("Fehler beim Laden der config.json-Env-Werte.", exc_info=True)
         self._cache = data
 
         config_help_json = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config_help.json")
@@ -270,18 +266,18 @@ class ConfigManager:
         return self._cache
 
     async def update(self):
-        """Updates the config with data from the cache"""
+        """Aktualisiert die Konfiguration mit Daten aus dem Cache"""
         await self.bot.api.update_config(self.filter_default(self._cache))
 
     async def refresh(self) -> dict:
-        """Refreshes internal cache with data from database"""
+        """Aktualisiert den internen Cache mit Daten aus der Datenbank"""
         for k, v in (await self.bot.api.get_config()).items():
             k = k.lower()
             if k in self.all_keys:
                 self._cache[k] = v
         if not self.ready_event.is_set():
             self.ready_event.set()
-            logger.debug("Successfully fetched configurations from database.")
+            logger.debug("Konfigurationen erfolgreich aus der Datenbank abgerufen.")
         return self._cache
 
     async def wait_until_ready(self) -> None:
@@ -291,7 +287,7 @@ class ConfigManager:
         key = key.lower()
         logger.info("Setting %s.", key)
         if key not in self.all_keys:
-            raise InvalidConfigError(f'Configuration "{key}" is invalid.')
+            raise InvalidConfigError(f'Konfiguration "{key}" ist ungültig.')
         self._cache[key] = item
 
     def __getitem__(self, key: str) -> typing.Any:
@@ -304,7 +300,7 @@ class ConfigManager:
     def get(self, key: str, convert=True) -> typing.Any:
         key = key.lower()
         if key not in self.all_keys:
-            raise InvalidConfigError(f'Configuration "{key}" is invalid.')
+            raise InvalidConfigError(f'Konfiguration "{key}" ist ungültig.')
         if key not in self._cache:
             self._cache[key] = deepcopy(self.defaults[key])
         value = self._cache[key]
@@ -325,8 +321,8 @@ class ConfigManager:
                     value = isodate.parse_duration(value)
                 except isodate.ISO8601Error:
                     logger.warning(
-                        "The {account} age limit needs to be a "
-                        'ISO-8601 duration formatted duration, not "%s".',
+                        "Die Altersgrenze für {account} muss a sein"
+                        'ISO-8601-Dauer formatierte Dauer, nicht "%s".',
                         value,
                     )
                     value = self.remove(key)
@@ -343,7 +339,7 @@ class ConfigManager:
             try:
                 value = self.enums[key](value)
             except ValueError:
-                logger.warning("Invalid %s %s.", key, value)
+                logger.warning("Ungültig %s %s.", key, value)
                 value = self.remove(key)
 
         elif key in self.force_str:
@@ -370,7 +366,7 @@ class ConfigManager:
 
         return value
 
-    async def set(self, key: str, item: typing.Any, convert=True) -> None:
+    def set(self, key: str, item: typing.Any, convert=True) -> None:
         if not convert:
             return self.__setitem__(key, item)
 
@@ -382,11 +378,11 @@ class ConfigManager:
                 if len(hex_) == 3:
                     hex_ = "".join(s for s in hex_ for _ in range(2))
                 if len(hex_) != 6:
-                    raise InvalidConfigError("Invalid color name or hex.")
+                    raise InvalidConfigError("Ungültiger Farbname oder Hex.")
                 try:
                     int(hex_, 16)
                 except ValueError:
-                    raise InvalidConfigError("Invalid color name or hex.")
+                    raise InvalidConfigError("Ungültiger Farbname oder Hex..")
 
             except InvalidConfigError:
                 name = str(item).lower()
@@ -405,7 +401,7 @@ class ConfigManager:
             except isodate.ISO8601Error:
                 try:
                     converter = UserFriendlyTime()
-                    time = await converter.convert(None, item, now=discord.utils.utcnow())
+                    time = converter.convert(None, item)
                     if time.arg:
                         raise ValueError
                 except BadArgument as exc:
@@ -413,8 +409,8 @@ class ConfigManager:
                 except Exception as e:
                     logger.debug(e)
                     raise InvalidConfigError(
-                        "Unrecognized time, please use ISO-8601 duration format "
-                        'string or a simpler "human readable" time.'
+                        "Nicht erkannte Zeit, bitte verwende das ISO-8601-Dauerformat"
+                        'Zeichenfolge oder eine einfachere "vom Menschen lesbare" Zeit.'
                     )
                 now = discord.utils.utcnow()
                 item = isodate.duration_isoformat(time.dt - now)
@@ -424,7 +420,7 @@ class ConfigManager:
             try:
                 return self.__setitem__(key, strtobool(item))
             except ValueError:
-                raise InvalidConfigError("Must be a yes/no value.")
+                raise InvalidConfigError("Muss ein Ja/Nein-Wert sein.")
 
         elif key in self.enums:
             if isinstance(item, self.enums[key]):
@@ -437,7 +433,7 @@ class ConfigManager:
         key = key.lower()
         logger.info("Removing %s.", key)
         if key not in self.all_keys:
-            raise InvalidConfigError(f'Configuration "{key}" is invalid.')
+            raise InvalidConfigError(f'Konfiguration "{key}" ist ungültig.')
         if key in self._cache:
             del self._cache[key]
         self._cache[key] = deepcopy(self.defaults[key])
@@ -461,7 +457,7 @@ class ConfigManager:
         for k, v in data.items():
             default = cls.defaults.get(k.lower(), Default)
             if default is Default:
-                logger.error("Unexpected configuration detected: %s.", k)
+                logger.error("Unerwartete Konfiguration erkannt: %s.", k)
                 continue
             if v != default:
                 filtered[k.lower()] = v
